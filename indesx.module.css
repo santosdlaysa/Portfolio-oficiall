@@ -1,9 +1,9 @@
 :root {
         --hue-color: 280;
-        --fundo: white;
+        --fundo: rgb(255, 255, 255);
         --text-color:#ffff;
         --text-color2:#464659;
-        --fundo2: #f3e8fd7b;
+        --fundo2: #e6aaff46;
         --shadow: rgba(100, 100, 111, 0.341) 0px 7px 29px 0px;
         --shadowint: rgba(40, 1, 47, 0.4) 0px 2px 4px,
         rgba(39, 0, 46, 0.3)  0px 7px 13px -3px, rgba(38, 0, 46, 0.1)  0px -3px 0px inset;
@@ -62,9 +62,10 @@
 
     }
     
-    .icones {
-        margin-top: 1rem;
-        display: flex;
+    .icons {
+        width: 50px;
+        margin: 1rem;
+
     }
     
     #projetos {
@@ -171,6 +172,9 @@
             width: 30rem;
             padding: 0;
             align-items: center;
+            margin: 1rem;
+            border-radius: 1rem;
+            box-shadow: var(--shadow);
     }
     
     .portfolio_description{
@@ -337,6 +341,7 @@
             flex-direction: column;
             align-items: center;
             margin: 0 1rem;
+            
     
         }
         #projetos {
