@@ -1,0 +1,494 @@
+:root {
+    --hue-color: 280;
+    --fundo: white;
+    --text-color:#ffff;
+    --text-color2:#464659;
+    --fundo2: #f3e8fd7b;
+    --shadow: rgba(100, 100, 111, 0.341) 0px 7px 29px 0px;
+    --shadowint: rgba(40, 1, 47, 0.4) 0px 2px 4px,
+    rgba(39, 0, 46, 0.3)  0px 7px 13px -3px, rgba(38, 0, 46, 0.1)  0px -3px 0px inset;
+    --text: rgb(70, 70, 89);
+    --hover: #baafe6;
+    --gradient: linear-gradient(45deg, #8f75ff, rgb(197, 143, 215));
+    --title: #8f75ff;
+    --body-style: #ffff;
+    --h3:#8f75ff;
+  }
+  
+  body {
+    font-family: 'Roboto mono', monospace;
+    color: var(--text-color2);
+    font-size: 18px;
+    line-height: 1.5;
+    padding: 0;
+    display: block;
+    margin: 0;
+    background-color: var(--body-style);
+  }
+  
+  .perfil {
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: var(--fundo2);
+  }
+  .perfil h2 {
+    max-width: 500px;
+    font-size: 28px;
+  }
+  #fotoperfil {
+    width: 300px;
+    margin: 1rem;
+    border-radius: 100%;
+    background: var(--gradient);
+    border: 5px solid transparent;
+  }
+  h3 {
+    color: var(--h3);
+    font-size: 24px;
+    margin-bottom: 0;
+    margin-left: 20px;
+    padding: 2rem;
+    text-transform: uppercase;
+    font-family: 'Roboto Mono', monospace;
+  
+  }
+  #tecnologias{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1rem 1rem 0 10rem;
+
+  }
+  
+  .icones {
+    margin-top: 1rem;
+    display: flex;
+  }
+  
+  #projetos {
+    text-align: center;
+    align-items: center;
+    background-color: var(--fundo2);
+    padding: 1rem;
+    height: 100rem;
+  
+  }
+  ul  h3 {
+    margin: 0;
+    padding: 1rem;
+    color: var(--h3);
+    font-size: 20px;
+    margin-bottom: 0;
+    margin-left: 20px;
+  }
+  
+  li{
+    display: block;
+  }
+  
+  
+  li a {
+    text-decoration: none;
+  }
+  li:nth-child(odd) {          
+    clear:both;                
+    float:left;
+    width:50%;    
+  }
+  
+  
+  .text_1 {
+    color: var(--h3);
+    padding: 20px;
+  }
+  
+  .icons {
+    width: 50px;
+    margin: 1rem;
+  }
+  
+  #sobre {
+    width: 100%;
+    height: 30rem;
+  }
+  
+  .conteudoSobre {
+    width: 80%;
+    height: 80%;
+    display: flex;
+    padding: 20px;
+    margin-left: 5rem;
+  }
+  
+  .h2sobre {
+    color: var(--title);
+    font-size: 28px;
+    margin-bottom: 0;
+    text-align: center;
+    padding: 10px;
+  }
+  
+  .textp{
+   text-align: justify;
+    font-size: 20px;
+    width: 90%;
+    margin-left: 10rem;
+  }
+  
+  .button_icon {
+      width: 50 px;
+      font-size: 1rem;
+      margin-right: 20px;
+      transition: .3s;
+      display: flex;
+      background: var(--gradient);
+      color: #ffffff;
+      padding: 1rem;
+      border-radius: 0.5rem;
+      font-weight: 100;
+  }
+  
+  .button_icon:hover {
+    box-shadow: var(--shadowint);
+  }
+  
+  .button_icon {
+    width: 15px;
+    margin-left: 10px;
+    margin-top: 1px;
+  }
+  
+  .portfolio_img{
+      display: flex;
+      margin: 10px;
+      box-shadow: var(--shadow);
+      margin-left: 30px;
+  }
+  
+  .telas {
+      width: 30rem;
+      padding: 0;
+      align-items: center;
+  }
+  
+  .portfolio_description{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  
+  }
+  
+  .container_text{
+    margin-top: 2rem;
+  }
+  
+  .section_container_1 {
+    align-items: center;
+    margin: 1rem;
+    gap: 8px;
+  
+  }
+  #contatos {
+    margin-top: 28rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  #contatos{
+    display: flex;
+    align-items: center;
+    margin-top: 2rem;
+    
+  }
+  
+  .contatos_h2{
+    color: var(--title);
+    font-size: 28px;
+    margin-bottom: 0;
+    margin-left: 20px;
+    
+  }
+  .contatos_p{
+    margin-left: 1rem;
+    font-size: 20px;
+  }
+  .WrapperButtonsContato {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+  }
+  .buttonContato {
+    background-image: var(--gradient);
+    border-radius: 10px;
+    color: var(--text-color);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 16px;
+    letter-spacing: 1px;
+    font-weight: 700;
+    padding: 10px 16px;
+    margin: 1rem;
+    
+  }
+  .buttonContato:hover {
+    box-shadow: var(--shadowint);
+  }
+  
+  .buttonContato img {
+    width: 40px;
+    margin-right: 1rem;
+  }
+  footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 14px;
+    margin-top: 0.5rem;
+    margin-bottom: 10px;
+    padding: 10px;
+  }
+
+  a {
+    text-decoration: none;
+  }
+  
+  @media screen and (max-width: 768px) {
+    body {
+      font-size: 16px;
+      margin: 0;
+  
+    }
+   .mainHeader {
+    display: flex;
+   }
+    .mainHeader {
+      flex-direction: column;
+      align-items: center;
+      padding: 0 1rem;
+    }
+    .nav {
+      margin-top: 0.5rem;
+      flex-direction: column-reverse;
+      align-items: center;
+      text-align: center;
+      margin-bottom: 0.5rem;
+    }
+    .logo_nav {
+      margin-right: 0;
+    }
+    .perfil {
+      flex-direction: column;
+      align-items: center;
+    }
+    #fotoperfil {
+      width: 200px;
+      margin: 1rem;
+    }
+    #tecnologias {
+      flex-direction: column;
+      align-items: center;
+      margin: 0 1rem;
+  
+    }
+    #projetos {
+      align-items: center;
+      
+    }
+    .container_project{
+      width: 80%;
+      display: flex;
+    }
+  
+    .portfolio-img {
+      width: 250px;
+      height: 150px;
+    }
+    #sobre {
+      margin: 0;
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .conteudoSobre{
+      flex-direction: column;
+      margin-bottom: 2rem;
+    }
+  
+    .text{
+      align-items: center;
+      margin: 10rem;
+    }
+  
+    p {
+      text-align: justify;
+    }
+    .text{
+      margin: 0;
+    }
+  
+    .textp{
+      width: 80%;
+      font-size: 15px;
+      margin-left: 1rem;
+      margin-top: 2rem;
+    }
+    .container_text{
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .telas{
+      width: 500px;
+      margin: 2rem;
+    }
+    
+    .portfolio-img{
+      flex-direction: column;
+      
+    }
+  
+    #contatos{
+      flex-direction: column;
+      text-align: center;
+      margin-top: 45rem;
+  
+    }
+    .WrapperButtonsContato {
+      flex-direction: column;
+    }
+    .buttonContato {
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 1rem;
+    }
+  }
+  
+  @media screen and (max-width: 1440px) {
+    .body {
+      margin: 0;
+      align-items: center;
+    }
+  
+    #sobre {
+      flex-direction: column;
+      align-items: center;
+      margin: auto;
+    }
+  
+    .conteudoSobre {
+      align-items: center;
+      margin-left: -6rem;
+      width: 100%;
+    }
+  
+    .textp{
+      width: 90%;
+      margin-left: 10rem;
+    }
+    .telas {
+      width: 300px;
+      height: 200px;
+  
+    }
+    #contatos {
+      margin-top: 75rem;
+    }
+    
+    
+  }
+  
+  /* Add more media queries as needed */
+
+
+  .mainHeader {
+    display: flex;
+    background-color: var(--fundo);
+    box-shadow: var(--shadow);
+    z-index: 2;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    height: 80px;
+    width: 100%;
+    
+    }
+    
+    .logo2 {
+      width: 60px;
+      padding: 10px;
+      margin-right: 35rem;
+      margin-left: 12rem;
+  
+    }
+    
+    #logo {
+      color: var(--text);
+      font-size: 18px;
+      font-weight: 700;
+      padding: 0;
+    }
+    
+    #logo:hover {
+      color: var(--fundo);
+    }
+    
+    strong {
+      color: var(--hover);
+    }
+  
+    
+   nav{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+      align-items: center;
+      padding: 2rem;
+      margin-left: 2rem;
+      letter-spacing: 0.1px;
+  
+    }
+    
+    .navButtons {
+      color: var(--text);
+      font-weight: 400;
+      font-size: 20px;
+      letter-spacing: 1px;
+      padding: 10px;
+      text-decoration: none;
+      
+  
+    }
+    
+    .navButtons:hover {
+      color: var(--hover);
+    }
+    
+    .buttonProjeto {
+      background: var(--gradient);
+      border-radius: 5px;
+      color: var(--text-color);
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      font-size: 16px;
+      letter-spacing: 1px;
+      font-weight: 500;
+      padding: 8px;
+      text-decoration: none;
+    }
+    
+    .buttonProjeto:hover {
+      box-shadow: var(--shadowint);
+    }
+    
+    .nav__btns {
+      display: flex;
+      align-items: center;
+    }
+      
