@@ -358,6 +358,7 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+        background-color: #baafe66e;
     }
     
     #contatos{
@@ -368,7 +369,7 @@
     }
     
     .contatos_h2{
-        color: var(--title);
+        color: var(--text-color2);
         font-size: 28px;
         margin-bottom: 0;
         margin-left: 20px;
@@ -411,7 +412,7 @@
         flex-direction: column;
         align-items: center;
         font-size: 14px;
-        margin-top: 0.5rem;
+        margin-top: 1rem;
         margin-bottom: 10px;
         padding: 10px;
     }
@@ -468,56 +469,51 @@
         body {
             font-size: 16px;
             margin: 0;
+            flex-direction: column;
     
         }
-     .mainHeader {
-        display: flex;
-     }
-        .mainHeader {
+  
+        .nav {
             flex-direction: column;
             align-items: center;
-            padding: 0 1rem;
+            margin: 0;
         }
-        .nav {
-            margin-top: 0.5rem;
-            flex-direction: column-reverse;
-            align-items: center;
-            text-align: center;
-            margin-bottom: 0.5rem;
-        }
-        .logo_nav {
-            margin-right: 0;
+
+       .logo2 {
+            margin-left: 0;
         }
         .perfil {
             flex-direction: column;
             align-items: center;
         }
         #fotoperfil {
-            width: 200px;
-            margin: 1rem;
+           max-width: 60rem;
+        }
+        .perfil-text {
+            flex-direction: column;
+            align-items: center;
+            margin-left: 0;
+            text-align: center;
+
         }
         #tecnologias {
             flex-direction: column;
-            align-items: center;
-            margin: 0 1rem;
-            
+            align-items: center;          
     
         }
         #projetos {
             align-items: center;
+            flex-direction: column;
             
         }
         .container_project{
-            width: 80%;
-            display: flex;
+            flex-direction: column;
         }
     
         .portfolio-img {
-            width: 250px;
-            height: 150px;
+            max-width: 30rem;
         }
         #sobre {
-            margin: 0;
             flex-direction: column;
             align-items: center;
         }
@@ -533,17 +529,15 @@
         }
     
         p {
-            text-align: justify;
+            flex-direction: column;
         }
         .text{
             margin: 0;
+            flex-direction: column;
         }
     
         .textp{
-            width: 80%;
-            font-size: 15px;
-            margin-left: 1rem;
-            margin-top: 2rem;
+            flex-direction: column;
         }
         .container_text{
             flex-direction: column;
@@ -551,10 +545,25 @@
         }
     
         .telas{
-            width: 500px;
-            margin: 2rem;
+            max-width: 20rem;
         }
         
+        li {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        li:nth-child(odd) {          
+            clear:both;                
+            float:left;
+            width:100%;    
+        }
+
+        .icons {
+            flex-direction: column;
+            align-items: center;
+        }
+
         .portfolio-img{
             flex-direction: column;
             
@@ -569,13 +578,7 @@
         .WrapperButtonsContato {
             flex-direction: column;
         }
-        .buttonContato {
-            margin: 1rem 0;
-        }
-        footer {
-            margin-top: 1rem;
-        }
-    }
+
     
     @media screen and (max-width: 1440px) {
         .body {
