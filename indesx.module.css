@@ -1,9 +1,9 @@
 :root {
         --hue-color: 280;
         --fundo: rgb(255, 255, 255);
-        --text-color:#ffff;
-        --text-color2:#464659;
-        --fundo2: #e6aaff46;
+        --text-color:#ffffff;
+        --text-color2:#ffffff;
+        --fundo2: #e6aaff00;
         --shadow: rgba(100, 100, 111, 0.341) 0px 7px 29px 0px;
         --shadowint: rgba(40, 1, 47, 0.4) 0px 2px 4px,
         rgba(39, 0, 46, 0.3)  0px 7px 13px -3px, rgba(38, 0, 46, 0.1)  0px -3px 0px inset;
@@ -11,8 +11,8 @@
         --hover: #baafe6;
         --gradient: linear-gradient(45deg, #8f75ff, rgb(197, 143, 215));
         --title: #8f75ff;
-        --body-style: #ffff;
-        --h3:#8f75ff;
+        --body-style: #320236;
+        --h3:#ffffff;
     }
     
     body {
@@ -25,18 +25,135 @@
         margin: 0;
         background-color: var(--body-style);
     }
+
+    
+
+    .mainHeader {
+        display: flex;
+        background-color: var(--fundo);
+        box-shadow: var(--shadow);
+        z-index: 2;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+        height: 80px;
+        
+        }
+        
+        .logo2 {
+            width: 60px;
+            padding: 10px;
+            margin-right: 25rem;
+            margin-left: 20rem;
+    
+        }
+        
+        #logo {
+            color: var(--text);
+            font-size: 18px;
+            font-weight: 700;
+            padding: 0;
+        }
+        
+        #logo:hover {
+            color: var(--fundo);
+        }
+        
+        strong {
+            color: var(--hover);
+        }
+    
+        
+     nav{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-right: 10rem;
+    
+        }
+        
+        .navButtons {
+            color: var(--text);
+            font-weight: 400;
+            font-size: 20px;
+            padding: 20px;
+            text-decoration: none;
+            
+    
+        }
+        
+        .navButtons:hover {
+            color: var(--hover);
+        }
+        
+        .buttonProjeto {
+            background: var(--gradient);
+            border-radius: 5px;
+            color: var(--text-color);
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            font-size: 16px;
+            letter-spacing: 1px;
+            font-weight: 500;
+            padding: 8px;
+            text-decoration: none;
+        }
+        
+        .buttonProjeto:hover {
+            box-shadow: var(--shadowint);
+        }
+        
+        .nav__btns {
+            display: flex;
+            align-items: center;
+        }
+
     
     .perfil {
         padding: 1rem 2rem;
         display: flex;
-        justify-content: space-evenly;
         align-items: center;
         background-color: var(--fundo2);
     }
-    .perfil h2 {
-        max-width: 500px;
-        font-size: 28px;
+ 
+    .perfil-text{
+        align-items: center;
+        width: 60rem;
+        height: 32rem;
+        margin-left: 20rem;
+        margin-top: 13rem;
     }
+
+    h2 {
+        color: var(--text-color);
+        font-size: 28px;
+      
+    }
+
+    .textp{
+        font-size: 13px;
+        width: 50rem;
+    }
+
+    .buttonContatoCv {
+        background-image: var(--gradient);
+        border-radius: 10px;
+        color: var(--text-color);
+        align-items: center;
+        font-size: 16px;
+        letter-spacing: 1px;
+        font-weight: 700;
+        padding: 17px 20px;
+        width: 203px;
+        height: 203px;
+    }
+
+    .iconcv{
+        max-width: 30px;
+        margin-top: 30px;
+    }
+
     #fotoperfil {
         width: 300px;
         margin: 1rem;
@@ -45,7 +162,7 @@
         border: 5px solid transparent;
     }
     h3 {
-        color: var(--h3);
+        color: var(--gradient);
         font-size: 24px;
         margin-bottom: 0;
         margin-left: 20px;
@@ -58,7 +175,7 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        margin: 1rem 1rem 0 10rem;
+        margin: 5rem;
 
     }
     
@@ -76,13 +193,16 @@
         height: 100rem;
     
     }
+
     ul  h3 {
-        margin: 0;
+        margin: 1rem;
         padding: 1rem;
         color: var(--h3);
         font-size: 20px;
         margin-bottom: 0;
         margin-left: 20px;
+        text-align: center;
+        
     }
     
     li{
@@ -92,14 +212,56 @@
     
     li a {
         text-decoration: none;
+        color: #ffffff;
     }
     li:nth-child(odd) {          
         clear:both;                
         float:left;
         width:50%;    
     }
+
     
+    .button-view {
+        background-image: var(--gradient);
+        border-radius: 10px;
+        color: var(--text-color);
+        align-items: center;
+        font-size: 16px;
+        letter-spacing: 1px;
+        font-weight: 700;
+        text-align: center;
+        width: 350px;
+        height: 50px;
+        cursor: pointer;
+        box-shadow: var(--shadow);
+        border: none;
+        margin: 5rem;
+        margin-top: -2rem;
+    }
     
+    .button-view-2 {
+        background-image: var(--gradient);
+        border-radius: 10px;
+        color: var(--text-color);
+        align-items: center;
+        font-size: 16px;
+        letter-spacing: 1px;
+        font-weight: 700;
+        margin-left: 2rem;
+        text-align: center;
+        width: 350px;
+        height: 50px;
+        cursor: pointer;
+        box-shadow: var(--shadow);
+        border: none;
+        margin: 5rem;
+        margin-top: -2rem;
+    }
+
+    .container-sub{
+        margin: 6rem;
+   
+    }
     .text_1 {
         color: var(--h3);
         padding: 20px;
@@ -131,12 +293,7 @@
         padding: 10px;
     }
     
-    .textp{
-     text-align: justify;
-        font-size: 20px;
-        width: 90%;
-        margin-left: 10rem;
-    }
+   
     
     .button_icon {
             width: 50 px;
@@ -181,6 +338,7 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+        
     
     }
     
@@ -192,6 +350,7 @@
         align-items: center;
         margin: 1rem;
         gap: 8px;
+        
     
     }
     #contatos {
@@ -453,88 +612,3 @@
     }
     
     /* Add more media queries as needed */
-
-
-    .mainHeader {
-        display: flex;
-        background-color: var(--fundo);
-        box-shadow: var(--shadow);
-        z-index: 2;
-        justify-content: space-between;
-        align-items: center;
-        position: relative;
-        height: 80px;
-        width: 100%;
-        
-        }
-        
-        .logo2 {
-            width: 60px;
-            padding: 10px;
-            margin-right: 35rem;
-            margin-left: 12rem;
-    
-        }
-        
-        #logo {
-            color: var(--text);
-            font-size: 18px;
-            font-weight: 700;
-            padding: 0;
-        }
-        
-        #logo:hover {
-            color: var(--fundo);
-        }
-        
-        strong {
-            color: var(--hover);
-        }
-    
-        
-     nav{
-            display: flex;
-            flex-direction: row;
-            justify-content: space-evenly;
-            align-items: center;
-            padding: 1rem;
-            margin-left: 2rem;
-    
-        }
-        
-        .navButtons {
-            color: var(--text);
-            font-weight: 400;
-            font-size: 20px;
-            padding: 20px;
-            text-decoration: none;
-            
-    
-        }
-        
-        .navButtons:hover {
-            color: var(--hover);
-        }
-        
-        .buttonProjeto {
-            background: var(--gradient);
-            border-radius: 5px;
-            color: var(--text-color);
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            font-size: 16px;
-            letter-spacing: 1px;
-            font-weight: 500;
-            padding: 8px;
-            text-decoration: none;
-        }
-        
-        .buttonProjeto:hover {
-            box-shadow: var(--shadowint);
-        }
-        
-        .nav__btns {
-            display: flex;
-            align-items: center;
-        }
