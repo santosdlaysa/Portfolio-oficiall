@@ -78,8 +78,8 @@
             font-size: 20px;
             padding: 20px;
             text-decoration: none;
+            transition: .3s;
             
-    
         }
         
         .navButtons:hover {
@@ -109,7 +109,46 @@
             align-items: center;
         }
 
-    
+    .nav-suspense {
+        display: none;
+        position: relative;
+        background-color: var(--fundo);
+        color: var(--text-color);
+        box-shadow: var(--shadow);
+        font-weight: 400;
+        font-size: 20px;
+        padding: 20px;
+        text-decoration: none;
+        cursor: pointer;
+        list-style: none;
+        width: 50%;
+    }
+
+    .nav-suspense-content {
+        display: none;
+        position: absolute;
+        min-width: 160px;
+        z-index: 1;
+        align-items: center;
+    }
+
+    .nav-suspense:hover .nav-suspense-content {
+        display: block;
+
+}
+
+    .nav-suspense-content a:hover {
+        background-color: var(--hover);
+        color: var(--text-color);
+    }
+
+    .nav-suspense:hover .nav-suspense-content {
+        display: block;
+    }
+
+
+
+   
     .perfil {
         padding: 1rem 2rem;
         display: flex;
@@ -189,16 +228,17 @@
     #projetos {
         text-align: center;
         align-items: center;
-        background-color: var(--fundo2);
+        background-color: var(--text-color);
         padding: 1rem;
-        height: 100rem;
+        height: 120rem;
+        color: #000;
     
     }
 
     ul  h3 {
         margin: 1rem;
         padding: 1rem;
-        color: var(--h3);
+        color: var(--title);
         font-size: 20px;
         margin-bottom: 0;
         margin-left: 20px;
@@ -264,7 +304,7 @@
    
     }
     .text_1 {
-        color: var(--h3);
+        color: var(--title);
         padding: 20px;
     }
     
@@ -356,6 +396,7 @@
     }
     #contatos {
         margin-top: 28rem;
+        width: 100%;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -373,11 +414,9 @@
         color: var(--text-color2);
         font-size: 28px;
         margin-bottom: 0;
-        margin-left: 20px;
         
     }
-    .contatos_p{
-        margin-left: 1rem;
+    .contatos_p{    
         font-size: 20px;
     }
     .WrapperButtonsContato {
@@ -412,59 +451,16 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        font-size: 14px;
+        font-size: 20px;
         margin-top: 1rem;
         margin-bottom: 10px;
         padding: 10px;
+        color: var(--h3);
     }
 
     a {
         text-decoration: none;
     }
-
-    label {
-        font-size: 20px;
-        color: var(--h3);
-        font-weight: 500;
-        margin-bottom: 0.5rem;
-    }
-
-        input {
-                width: 100%;
-                padding: 0.5rem;
-                border-radius: 0.5rem;
-                border: 1px solid var(--text-color2);
-                margin-bottom: 0.5rem;
-                font-size: 16px;
-                color: var(--text-color2);
-                
-        }
-
-        textarea {
-                width: 100%;
-                padding: 0.5rem;
-                border-radius: 0.5rem;
-                border: 1px solid var(--text-color2);
-                margin-bottom: 0.5rem;
-                font-size: 16px;
-                color: var(--text-color2);
-        }
-    
-        .buttonInput {
-                background-image: var(--gradient);
-                border-radius: 5px;
-                color: var(--text-color);
-                font-size: 16px;
-                font-weight: 700;
-                padding: 10px 16px;
-                margin: 1rem;
-                text-align: center;
-                width: 350px;
-                height: 50px;
-                display: block;
-                cursor: pointer;
-                margin-left: 11rem;
-        }
 
     @media screen and (max-width: 768px) {
         body {
@@ -474,10 +470,14 @@
     
         }
   
-        .nav {
-            flex-direction: column;
-            align-items: center;
-            margin: 0;
+        .mainHeader {
+            display: none;
+        }
+
+        .nav-suspense {
+            display: block;
+            width: 100%;
+            text-align: center;
         }
 
        .logo2 {
@@ -581,6 +581,7 @@
         }
 
     
+    }
     @media screen and (max-width: 1440px) {
         .body {
             margin: 0;
@@ -600,7 +601,7 @@
         }
     
         .textp{
-            width: 90%;
+            width: 40rem;
             margin-left: 10rem;
         }
         .telas {
@@ -614,5 +615,3 @@
         
         
     }
-    
-    /* Add more media queries as needed */
