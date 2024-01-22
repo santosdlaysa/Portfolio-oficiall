@@ -37,6 +37,8 @@
         align-items: center;
         position: relative;
         height: 80px;
+        max-width: 100%; /* Ajuste na largura máxima */
+        margin: 0 auto; /* Centraliza o cabeçalho */
         
         }
         
