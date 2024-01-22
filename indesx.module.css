@@ -464,123 +464,111 @@
 
     @media screen and (max-width: 768px) {
         body {
-            font-size: 16px;
-            margin: 0;
-            flex-direction: column;
-    
+            font-size: 14px;
         }
-  
+    
         .mainHeader {
             display: none;
         }
-
+    
         .nav-suspense {
             display: block;
             width: 100%;
             text-align: center;
         }
-
-       .logo2 {
-            margin-left: 0;
-        }
+    
         .perfil {
             flex-direction: column;
             align-items: center;
         }
+    
         #fotoperfil {
-           max-width: 60rem;
+            max-width: 100%;
+            height: auto;
         }
+    
         .perfil-text {
-            flex-direction: column;
-            align-items: center;
-            margin-left: 0;
             text-align: center;
-
+            margin-left: 0;
         }
+    
         #tecnologias {
             flex-direction: column;
-            align-items: center;          
-    
+            align-items: center;
+            margin: 1rem 0;
         }
+    
         #projetos {
             align-items: center;
             flex-direction: column;
-            
-        }
-        .container_project{
-            flex-direction: column;
+            padding: 1rem;
         }
     
-        .portfolio-img {
-            max-width: 30rem;
+        .portfolio_img {
+            max-width: 100%;
         }
+    
         #sobre {
             flex-direction: column;
             align-items: center;
         }
     
-        .conteudoSobre{
+        .conteudoSobre {
             flex-direction: column;
             margin-bottom: 2rem;
         }
     
-        .text{
-            align-items: center;
-            margin: 10rem;
+        .text {
+            text-align: center;
+            margin: 1rem 0;
         }
     
         p {
-            flex-direction: column;
-        }
-        .text{
+            text-align: center;
             margin: 0;
-            flex-direction: column;
         }
     
-        .textp{
-            flex-direction: column;
+        .textp {
+            text-align: center;
+            width: 100%;
+            margin: 1rem 0;
         }
-        .container_text{
+    
+        .container_text {
             flex-direction: column;
             align-items: center;
         }
     
-        .telas{
-            max-width: 20rem;
+        .telas {
+            max-width: 100%;
+            height: auto;
         }
-        
+    
         li {
             flex-direction: column;
             align-items: center;
+            width: 100%;
+            clear: both;
         }
-
-        li:nth-child(odd) {          
-            clear:both;                
-            float:left;
-            width:100%;    
-        }
-
+    
         .icons {
             flex-direction: column;
             align-items: center;
         }
-
-        .portfolio-img{
+    
+        .portfolio-img {
             flex-direction: column;
-            
         }
     
-        #contatos{
+        #contatos {
             flex-direction: column;
             text-align: center;
-            margin-top: 45rem;
-    
+            margin-top: 2rem;
         }
+    
         .WrapperButtonsContato {
             flex-direction: column;
         }
-
-    
     }
     @media screen and (max-width: 1440px) {
         .body {
@@ -615,3 +603,38 @@
         
         
     }
+
+    @media screen and (max-width: 1024px) {
+        .body {
+            margin: 0;
+            align-items: center;
+        }
+    
+        #sobre {
+            flex-direction: column;
+            align-items: center;
+            margin: auto;
+        }
+    
+        .conteudoSobre {
+            align-items: center;
+            margin-left: -6rem;
+            width: 100%;
+        }
+    
+        .textp{
+            width: 40rem;
+            margin-left: 10rem;
+        }
+        .telas {
+            width: 300px;
+            height: 200px;
+    
+        }
+        #contatos {
+            margin-top: 75rem;
+        }
+        
+    }
+
+    
