@@ -50,8 +50,9 @@
             color: #ffffff;
             text-decoration: none;
             font-size: 1.5rem;
-            text-transform: uppercase;
+            font-weight: 700;
         }
+        
         .nav-list {
             display: flex;
             list-style: none;
@@ -312,7 +313,7 @@
             overflow-x: hidden; 
         }
 
-
+    
         .nav-list {
             position: absolute;
             top: 8vh;
@@ -331,13 +332,12 @@
         .nav-list li {
             margin-left: 0;
             opacity: 0;
-
-            
         }
 
         .nav-list a {
             font-size: 1.5rem;
             color: #ffffff;
+
         }
 
         .nav-list li a {
@@ -350,6 +350,10 @@
 
         .menu-mobile {
             display: block;
+        }
+
+        .menu-mobile div{
+            background-color: #ffffff;
         }
 
         .nav-list.active {
@@ -388,7 +392,7 @@
 
         #fotoperfil {
             width: 200px;
-            margin: -1rem;
+            margin-top: -3rem;
             border-radius: 100%;
         }
 
@@ -431,52 +435,39 @@
         }
 
         #projetos {
-            padding: 2rem;
-            height: 108rem;
+            padding: -2rem;
+            height: 118vh;
             margin: 2rem;
+            width: 90vw;
+            margin-left: 0;
             
         }
 
         .container-sub{
             display: flex;
+            margin: 5rem;
             flex-direction: column;
             align-items: center;
-            justify-content: center;
-            margin-left: 5rem;
-            margin-top: 2rem;
-            margin-bottom: 3rem;
-            display: block;
+            height: 30rem;
+            width: 95vw;
+            margin-left: -1rem;
 
         }
 
-        .button-view {
-            width: 150px;
-            height: 50px;
-            margin: 1rem;
-            margin-top: 2rem;
-            margin-left: -5rem;
-        }
-
-        .button-view-2 {
-            width: 150px;
-            height: 50px;
-            margin: 1rem;
-            margin-top: 2rem;
-            margin-left: -5rem;
-        }
+       
 
         .telas {
             max-width: 300px;
             border-radius: 10px;
-            margin-left: -5rem;
             align-self: center;
+            margin-bottom: 2rem;
         }
 
         ul  h3 {
             font-size: 20px;
             text-align: center;
             width: 300px;
-            margin-left: -6rem;
+            margin-left: 6rem;
             
         }
 
@@ -496,10 +487,22 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            margin:-2rem;
+            margin-top: 125rem;
+            width: 100vw;
+            height: 50vh;
+        }
+
+        .contatos_h2{
+            font-size: 28px;
             margin-top: 2rem;
             margin-bottom: 2rem;
     
+        }
+
+        .contatos_p{    
+            font-size: 20px;
+            margin: 1rem;
+            text-align: center;
         }
         .WrapperButtonsContato{
             flex-direction: column;
@@ -509,11 +512,13 @@
         footer {
             font-size: 12px;
             margin-top: 5rem;
+            height: 30px;
+
         }
 
     }
 
-    @media screen and (max-width: 1440px) {
+    /* @media screen and (max-width: 1440px) {
         .perfil {
             display: flex;
             align-items: center;
@@ -545,7 +550,7 @@
         footer {
             height: 5vh;
         }
-    }
+    }*/
 
 
     
