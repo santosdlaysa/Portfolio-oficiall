@@ -37,11 +37,11 @@
         }
     
         
-    nav  {
+         nav  {
         display: flex;
         background-color: #241e4e;
-        justify-content: space-around;
         align-items: center;
+        justify-content: space-around;
         height: 8vh;
         }
 
@@ -60,15 +60,11 @@
         .nav-list li {
             letter-spacing: 2px;
             margin-left: 32px;
-        }
-
-        .navButtons {
             color: #ffffff;
             font-weight: 400;
             font-size: 22px;
             text-decoration: none;
             transition: .3s;
-            
         }
         
         .navButtons:hover {
@@ -83,8 +79,8 @@
     .menu-mobile div {
         width: 32px;
         height: 2px;
-        background: #000;
         margin: 8px;
+        background-color: #ffffff;
        
     }
    
@@ -311,13 +307,12 @@
         body{
             overflow-x: hidden; 
         }
-
     
         .nav-list {
             position: absolute;
-            top: 8vh;
+            top: 7.5vh;
             right: 0;
-            width: 50vw;
+            width: 38vw;
             height: 92vh;
             background: #241e4e;
             flex-direction: column;
@@ -329,24 +324,13 @@
         }
 
         .nav-list li {
-            margin-left: 0;
+            margin-left: 28rem;
             opacity: 0;
         }
 
         .nav-list a {
-            font-size: 1.5rem;
-            color: #ffffff;
-
+            font-size: 1rem;
         }
-
-        .nav-list li a {
-            color: #ffffff;
-        }
-        .nav-list li {
-            margin-left: 0;
-            opacity: 0;
-        }
-
         .menu-mobile {
             display: block;
         }
@@ -359,7 +343,7 @@
             transform: translateX(0);
         }
 
-        @keyframes navLinksFade {
+        @keyframes navLinkFade {
             from {
                 opacity: 0;
                 transform: translateX(50px);
