@@ -2,13 +2,13 @@
         --hue-color: 280;
         --text-color:#000000;
         --text-color2:#8e75ff65;
-        --fundo2: #CDE7B0;
+        --fundo2: #f6ebff;
         --shadow: rgba(100, 100, 111, 0.341) 0px 7px 29px 0px;
         --shadowint: rgba(40, 1, 47, 0.4) 0px 2px 4px,
         rgba(39, 0, 46, 0.3)  0px 7px 13px -3px, rgba(38, 0, 46, 0.1)  0px -3px 0px inset;
         --text: rgb(70, 70, 89);
         --hover: #635c80;
-        --gradient: linear-gradient(45deg, #7286A0, #baa3bf);
+        --gradient: linear-gradient(45deg, #8d72a0, #d2f6ff);
         --title: #8f75ff;
         --body-style: #8e75ff65;
         --h3:#8e75ff65;
@@ -102,9 +102,11 @@
 
     h2 {
         color: #241e4e;
-        font-size: 28px;
-      
+        font-size: 30px;
+        margin-bottom: 2rem;
+        margin-top: -2rem;
     }
+
 
     .textp {
         font-size: 15px;
@@ -155,7 +157,6 @@
         margin: 1rem;
         padding: 1rem;
         text-align: center;
-
     }
     
     .icons {
@@ -170,7 +171,7 @@
         background-color: var(--fundo2);
         padding: 2rem;
         height: 75rem;
-        margin: 2rem;
+        margin: 5rem;
         display: inline-block;
         color: #000000;
     
@@ -238,8 +239,8 @@
     }
 
 
-    #contatos {
-        width: 90vw;
+    #Contatos {
+        width: 100vw;
         height: 20vh;
         display: flex;
         flex-direction: column;
@@ -294,7 +295,6 @@
         margin-top: 1rem;
         margin-bottom: 10px;
         color: var(--text-color);
-        background-color: #ffff;
 
     }
 
@@ -374,12 +374,6 @@
             margin-top: 1rem;
             text-align: center;
         }
-
-        .text_1{
-            margin-bottom: 3rem;
-        }
-
-
 
         #fotoperfil {
             width: 200px;
