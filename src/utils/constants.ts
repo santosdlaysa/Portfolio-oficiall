@@ -4,23 +4,23 @@ export const PERSONAL_INFO: PersonalInfo = {
   name: 'Laysa Diniz',
   role: 'Desenvolvedora Fullstack',
   bio: 'Desenvolvedora apaixonada por criar experiências digitais incríveis. Fiz a transição do Direito para a tecnologia e hoje me dedico ao desenvolvimento de interfaces modernas e intuitivas. Sempre em busca de novos desafios e oportunidades para crescer na área tech! 👩‍💻',
-  profileImage: '/src/assets/images/profile.jpg',
-  resumeUrl: '/src/assets/images/Currículo - DEV.pdf',
+  profileImage: '/profile.jpg',
+  resumeUrl: '/Currículo - DEV.pdf',
   socialLinks: [
     {
       name: 'LinkedIn',
       url: 'https://www.linkedin.com/in/laysadiniz',
-      icon: '/src/assets/images/linkedin (1).png'
+      icon: '/linkedin (1).png'
     },
     {
       name: 'GitHub',
       url: 'https://github.com/santosdlaysa',
-      icon: '/src/assets/images/github.png'
+      icon: '/github.png'
     },
     {
       name: 'Instagram',
       url: 'https://www.instagram.com/santosdlaysa',
-      icon: '/src/assets/images/instagram.png'
+      icon: '/instagram.png'
     }
   ]
 };
@@ -35,17 +35,17 @@ export const NAVIGATION: NavigationItem[] = [
 export const TECHNOLOGIES: Technology[] = [
   {
     name: 'HTML',
-    icon: '/src/assets/images/imght.svg',
+    icon: '/imght.svg',
     category: 'frontend'
   },
   {
     name: 'CSS',
-    icon: '/src/assets/images/vscode-icons_file-type-css.svg',
+    icon: '/vscode-icons_file-type-css.svg',
     category: 'frontend'
   },
   {
     name: 'JavaScript',
-    icon: '/src/assets/images/vscode-icons_file-type-js-official.svg',
+    icon: '/vscode-icons_file-type-js-official.svg',
     category: 'frontend'
   },
   {
@@ -55,7 +55,7 @@ export const TECHNOLOGIES: Technology[] = [
   },
   {
     name: 'React',
-    icon: '/src/assets/images/logos_react.svg',
+    icon: '/logos_react.svg',
     category: 'frontend'
   },
   {
@@ -80,12 +80,12 @@ export const TECHNOLOGIES: Technology[] = [
   },
   {
     name: 'VSCode',
-    icon: '/src/assets/images/vscode-icons_file-type-vscode.svg',
+    icon: '/vscode-icons_file-type-vscode.svg',
     category: 'tools'
   },
   {
     name: 'GitHub',
-    icon: '/src/assets/images/akar-icons_github-fill.svg',
+    icon: '/akar-icons_github-fill.svg',
     category: 'tools'
   }
 ];
@@ -94,7 +94,7 @@ export const PROJECTS: Project[] = [
   {
     id: '1',
     title: 'AgendaMais',
-    image: '/src/assets/images/img_1.png',
+    image: '/img_1.png',
     url: 'https://agendamais-x19j.vercel.app/',
     technologies: ['React', 'TypeScript', 'Tailwind CSS'],
     description: 'Sistema de agendamento online moderno e intuitivo para gerenciar compromissos e horários de forma eficiente.'
@@ -102,7 +102,7 @@ export const PROJECTS: Project[] = [
   {
     id: '2',
     title: 'Suite Landing Page',
-    image: '/src/assets/images/preview.jpg',
+    image: '/preview.jpg',
     url: 'https://santosdlaysa.github.io/suite-landing-page-a/',
     technologies: ['HTML', 'CSS', 'JavaScript'],
     description: 'Landing page moderna e responsiva com design elegante e animações suaves.'
@@ -110,7 +110,7 @@ export const PROJECTS: Project[] = [
   {
     id: '3',
     title: 'Newsletter Email',
-    image: '/src/assets/images/desktop-design.jpg',
+    image: '/desktop-design.jpg',
     url: 'https://santosdlaysa.github.io/Newsletter-one/',
     technologies: ['HTML', 'CSS', 'JavaScript'],
     description: 'Sistema de newsletter com validação de formulário e design responsivo.'
@@ -118,7 +118,7 @@ export const PROJECTS: Project[] = [
   {
     id: '4',
     title: 'Site de Recrutamento',
-    image: '/src/assets/images/visualpage.png',
+    image: '/visualpage.png',
     url: 'https://santosdlaysa.github.io/website/',
     technologies: ['HTML', 'CSS', 'JavaScript'],
     description: 'Plataforma de recrutamento com interface intuitiva e funcionalidades avançadas.'
@@ -126,7 +126,7 @@ export const PROJECTS: Project[] = [
   {
     id: '5',
     title: 'Site de Estética',
-    image: '/src/assets/images/Imagem-login.png',
+    image: '/Imagem-login.png',
     url: 'https://santosdlaysa.github.io/tela-de-login/',
     technologies: ['HTML', 'CSS', 'JavaScript'],
     description: 'Sistema de login para clínica de estética com design moderno e seguro.'
@@ -134,7 +134,7 @@ export const PROJECTS: Project[] = [
   {
     id: '6',
     title: 'Relógio Digital',
-    image: '/src/assets/images/relogio.png',
+    image: '/relogio.png',
     url: 'https://santosdlaysa.github.io/RelogioDigital/',
     technologies: ['HTML', 'CSS', 'JavaScript'],
     description: 'Relógio digital interativo com múltiplos fusos horários e cronômetro.'
@@ -142,7 +142,7 @@ export const PROJECTS: Project[] = [
   {
     id: '7',
     title: 'Todo List',
-    image: '/src/assets/images/todolist.png',
+    image: '/todolist.png',
     url: 'https://santosdlaysa.github.io/Todo-list/',
     technologies: ['HTML', 'CSS', 'JavaScript'],
     description: 'Aplicativo de lista de tarefas com funcionalidades de adicionar, editar e excluir.'
