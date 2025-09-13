@@ -3,7 +3,7 @@ import { PERSONAL_INFO } from '@/utils/constants';
 
 export function HeroSection() {
   return (
-    <section id="home" className="relative min-h-[50vh] overflow-hidden">
+    <section id="home" className="relative min-h-screen overflow-hidden pt-20">
       {/* Background with gradient mesh */}
       <div className="absolute inset-0 bg-gradient-hero opacity-90" />
       <div className="absolute inset-0 bg-mesh opacity-20" />
@@ -13,8 +13,8 @@ export function HeroSection() {
       <div className="absolute top-40 right-20 w-32 h-32 bg-accent-400/20 rounded-full blur-2xl animate-float animation-delay-200" />
       <div className="absolute bottom-20 left-1/4 w-16 h-16 bg-purple-600/20 rounded-full blur-lg animate-float animation-delay-500" />
 
-      <div className="relative z-10 min-h-[50vh] flex items-center">
-        <div className="container-center py-2">
+      <div className="relative z-10 min-h-[calc(100vh-5rem)] flex items-center">
+        <div className="container-center py-8">
           <div className="flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-12">
             
             {/* Text Content */}
@@ -101,8 +101,8 @@ export function HeroSection() {
           </div>
           
           {/* Scroll indicator */}
-          <div className="absolute left-1/2 transform -translate-x-1/2 text-white/60 animate-bounce">
-            <div className="flex flex-col items-center ">
+          <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 text-white/60 animate-bounce">
+            <div className="flex flex-col items-center gap-1">
               <span className="text-xs font-medium">Scroll para explorar</span>
               <ArrowDown size={16} />
             </div>
