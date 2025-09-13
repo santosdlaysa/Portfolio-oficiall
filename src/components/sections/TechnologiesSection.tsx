@@ -1,34 +1,9 @@
-import { Code, Palette, Wrench } from 'lucide-react';
 import { Card } from '@/components/ui/Card';
 import { TECHNOLOGIES } from '@/utils/constants';
 import { useScrollAnimation } from '@/hooks/useIntersectionObserver';
 
-const categoryIcons = {
-  frontend: <Code size={24} />,
-  backend: <Palette size={24} />,
-  testing: <Wrench size={24} />,
-  practices: <Code size={24} />,
-  tools: <Wrench size={24} />
-};
-
-const categoryColors = {
-  frontend: 'from-blue-500 to-purple-600',
-  backend: 'from-emerald-500 to-teal-600',
-  testing: 'from-orange-500 to-red-600',
-  practices: 'from-indigo-500 to-purple-600',
-  tools: 'from-green-500 to-emerald-600'
-};
-
 export function TechnologiesSection() {
   const sectionRef = useScrollAnimation();
-  
-  const groupedTechs = TECHNOLOGIES.reduce((acc, tech) => {
-    if (!acc[tech.category]) {
-      acc[tech.category] = [];
-    }
-    acc[tech.category].push(tech);
-    return acc;
-  }, {} as Record<string, typeof TECHNOLOGIES>);
 
   return (
     <section id="tecnologias" className="relative py-12 bg-gradient-to-br from-white via-purple-50/30 to-blue-50/50 overflow-hidden">
