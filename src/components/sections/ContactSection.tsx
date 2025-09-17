@@ -84,7 +84,7 @@ export function ContactSection() {
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
-                href="mailto:contato@laysadiniz.dev"
+                href="mailto:santosdlaysa@gmail.com"
                 className="inline-flex items-center gap-2 bg-gradient-primary text-white px-6 py-3 rounded-xl hover:scale-105 transition-all duration-300 font-semibold"
               >
                 <Mail size={20} />
@@ -92,7 +92,7 @@ export function ContactSection() {
               </a>
               
               <a
-                href="https://wa.me/5511999999999"
+                href="https://wa.me/5595991371313"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 bg-white text-primary-900 px-6 py-3 rounded-xl hover:bg-gray-100 transition-colors duration-300 font-semibold"
