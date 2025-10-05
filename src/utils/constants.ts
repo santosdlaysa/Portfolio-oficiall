@@ -98,9 +98,16 @@ export const PROJECTS: Project[] = [
     url: 'https://agendamais-x19j.vercel.app/',
     technologies: ['React', 'TypeScript', 'Tailwind CSS'],
     description: 'Sistema de agendamento online moderno e intuitivo para gerenciar compromissos e horários de forma eficiente.'
-  },
+  },{
+        id: '2',
+        title: 'AgendaMais',
+        image: '/web.png',
+        url: 'https://web-agendamais-6fmq.vercel.app/',
+        technologies: ['React', 'TypeScript', 'Tailwind CSS'],
+        description: 'Site de marketing do Sistema de agendamento online'
+    },
   {
-    id: '2',
+    id: '3',
     title: 'Suite Landing Page',
     image: '/preview.jpg',
     url: 'https://santosdlaysa.github.io/suite-landing-page-a/',
@@ -108,7 +115,7 @@ export const PROJECTS: Project[] = [
     description: 'Landing page moderna e responsiva com design elegante e animações suaves.'
   },
   {
-    id: '3',
+    id: '4',
     title: 'Newsletter Email',
     image: '/desktop-design.jpg',
     url: 'https://santosdlaysa.github.io/Newsletter-one/',
@@ -116,7 +123,7 @@ export const PROJECTS: Project[] = [
     description: 'Sistema de newsletter com validação de formulário e design responsivo.'
   },
   {
-    id: '4',
+    id: '5',
     title: 'Site de Recrutamento',
     image: '/visualpage.png',
     url: 'https://santosdlaysa.github.io/website/',
@@ -124,7 +131,7 @@ export const PROJECTS: Project[] = [
     description: 'Plataforma de recrutamento com interface intuitiva e funcionalidades avançadas.'
   },
   {
-    id: '5',
+    id: '6',
     title: 'Site de Estética',
     image: '/Imagem-login.png',
     url: 'https://santosdlaysa.github.io/tela-de-login/',
@@ -132,7 +139,7 @@ export const PROJECTS: Project[] = [
     description: 'Sistema de login para clínica de estética com design moderno e seguro.'
   },
   {
-    id: '6',
+    id: '7',
     title: 'Relógio Digital',
     image: '/relogio.png',
     url: 'https://santosdlaysa.github.io/RelogioDigital/',
@@ -140,7 +147,7 @@ export const PROJECTS: Project[] = [
     description: 'Relógio digital interativo com múltiplos fusos horários e cronômetro.'
   },
   {
-    id: '7',
+    id: '8',
     title: 'Todo List',
     image: '/todolist.png',
     url: 'https://santosdlaysa.github.io/Todo-list/',
