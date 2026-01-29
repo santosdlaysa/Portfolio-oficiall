@@ -4,7 +4,7 @@ export const PERSONAL_INFO: PersonalInfo = {
   name: 'Laysa Diniz',
   role: 'Desenvolvedora Fullstack',
   bio: 'Desenvolvedora apaixonada por criar experiências digitais incríveis. Fiz a transição do Direito para a tecnologia e hoje me dedico ao desenvolvimento de interfaces modernas e intuitivas. Sempre em busca de novos desafios e oportunidades para crescer na área tech! 👩‍💻',
-  profileImage: '/profile.jpg',
+  profileImage: '/profile.jpeg',
   resumeUrl: '/Currículo - DEV.pdf',
   socialLinks: [
     {
@@ -93,21 +93,30 @@ export const TECHNOLOGIES: Technology[] = [
 export const PROJECTS: Project[] = [
   {
     id: '1',
+    title: 'Agronet',
+    image: '/agronet.png',
+    url: 'https://agronet.vercel.app/login',
+    technologies: ['React', 'TypeScript', 'Tailwind CSS'],
+    description: 'Sistema de gestão agrícola com interface moderna para controle e monitoramento de atividades rurais.'
+  },
+  {
+    id: '2',
     title: 'AgendaMais',
     image: '/img_1.png',
     url: 'https://agendamais-x19j.vercel.app/',
     technologies: ['React', 'TypeScript', 'Tailwind CSS'],
     description: 'Sistema de agendamento online moderno e intuitivo para gerenciar compromissos e horários de forma eficiente.'
-  },{
-        id: '2',
-        title: 'AgendaMais',
-        image: '/web.png',
-        url: 'https://web-agendamais-6fmq.vercel.app/',
-        technologies: ['React', 'TypeScript', 'Tailwind CSS'],
-        description: 'Site de marketing do Sistema de agendamento online'
-    },
+  },
   {
     id: '3',
+    title: 'AgendaMais',
+    image: '/web.png',
+    url: 'https://web-agendamais-6fmq.vercel.app/',
+    technologies: ['React', 'TypeScript', 'Tailwind CSS'],
+    description: 'Site de marketing do Sistema de agendamento online'
+  },
+  {
+    id: '4',
     title: 'Suite Landing Page',
     image: '/preview.jpg',
     url: 'https://santosdlaysa.github.io/suite-landing-page-a/',
@@ -115,7 +124,7 @@ export const PROJECTS: Project[] = [
     description: 'Landing page moderna e responsiva com design elegante e animações suaves.'
   },
   {
-    id: '4',
+    id: '5',
     title: 'Newsletter Email',
     image: '/desktop-design.jpg',
     url: 'https://santosdlaysa.github.io/Newsletter-one/',
@@ -123,7 +132,7 @@ export const PROJECTS: Project[] = [
     description: 'Sistema de newsletter com validação de formulário e design responsivo.'
   },
   {
-    id: '5',
+    id: '6',
     title: 'Site de Recrutamento',
     image: '/visualpage.png',
     url: 'https://santosdlaysa.github.io/website/',
@@ -131,7 +140,7 @@ export const PROJECTS: Project[] = [
     description: 'Plataforma de recrutamento com interface intuitiva e funcionalidades avançadas.'
   },
   {
-    id: '6',
+    id: '7',
     title: 'Site de Estética',
     image: '/Imagem-login.png',
     url: 'https://santosdlaysa.github.io/tela-de-login/',
@@ -139,7 +148,7 @@ export const PROJECTS: Project[] = [
     description: 'Sistema de login para clínica de estética com design moderno e seguro.'
   },
   {
-    id: '7',
+    id: '8',
     title: 'Relógio Digital',
     image: '/relogio.png',
     url: 'https://santosdlaysa.github.io/RelogioDigital/',
@@ -147,7 +156,7 @@ export const PROJECTS: Project[] = [
     description: 'Relógio digital interativo com múltiplos fusos horários e cronômetro.'
   },
   {
-    id: '8',
+    id: '9',
     title: 'Todo List',
     image: '/todolist.png',
     url: 'https://santosdlaysa.github.io/Todo-list/',

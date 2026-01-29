@@ -81,8 +81,10 @@ export default {
         'scale-in': 'scaleIn 0.3s ease-out',
         'bounce-light': 'bounceLight 2s infinite',
         'float': 'float 6s ease-in-out infinite',
-        'gradient': 'gradient 15s ease infinite',
+        'gradient': 'gradient 3s ease infinite',
         'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+        'spin-slow': 'spin 20s linear infinite',
+        'spin-slow-reverse': 'spinReverse 25s linear infinite',
       },
       keyframes: {
         fadeIn: {
@@ -112,6 +114,10 @@ export default {
         gradient: {
           '0%, 100%': { backgroundPosition: '0% 50%' },
           '50%': { backgroundPosition: '100% 50%' },
+        },
+        spinReverse: {
+          '0%': { transform: 'rotate(360deg)' },
+          '100%': { transform: 'rotate(0deg)' },
         },
       },
       backdropBlur: {
