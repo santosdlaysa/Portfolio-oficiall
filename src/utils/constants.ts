@@ -93,6 +93,14 @@ export const TECHNOLOGIES: Technology[] = [
 export const PROJECTS: Project[] = [
   {
     id: '1',
+    title: 'Lumera Fest',
+    image: '/img_6.png',
+    url: 'https://lumerafest.online/events/',
+    technologies: ['React', 'TypeScript', 'Tailwind CSS'],
+    description: 'Sistema de vendas de ingressos de festas e eventos com interface moderna e experiência de compra simplificada.'
+  },
+  {
+    id: '2',
     title: 'Agronet',
     image: '/agronet.png',
     url: 'https://agronet.vercel.app/login',
@@ -100,7 +108,7 @@ export const PROJECTS: Project[] = [
     description: 'Sistema de gestão agrícola com interface moderna para controle e monitoramento de atividades rurais.'
   },
   {
-    id: '2',
+    id: '3',
     title: 'AgendaMais',
     image: '/img_1.png',
     url: 'https://agendamais-x19j.vercel.app/',
@@ -108,7 +116,7 @@ export const PROJECTS: Project[] = [
     description: 'Sistema de agendamento online moderno e intuitivo para gerenciar compromissos e horários de forma eficiente.'
   },
   {
-    id: '3',
+    id: '4',
     title: 'AgendaMais',
     image: '/web.png',
     url: 'https://web-agendamais-6fmq.vercel.app/',
@@ -116,7 +124,7 @@ export const PROJECTS: Project[] = [
     description: 'Site de marketing do Sistema de agendamento online'
   },
   {
-    id: '4',
+    id: '5',
     title: 'Suite Landing Page',
     image: '/preview.jpg',
     url: 'https://santosdlaysa.github.io/suite-landing-page-a/',
@@ -124,7 +132,7 @@ export const PROJECTS: Project[] = [
     description: 'Landing page moderna e responsiva com design elegante e animações suaves.'
   },
   {
-    id: '5',
+    id: '6',
     title: 'Newsletter Email',
     image: '/desktop-design.jpg',
     url: 'https://santosdlaysa.github.io/Newsletter-one/',
@@ -132,7 +140,7 @@ export const PROJECTS: Project[] = [
     description: 'Sistema de newsletter com validação de formulário e design responsivo.'
   },
   {
-    id: '6',
+    id: '7',
     title: 'Site de Recrutamento',
     image: '/visualpage.png',
     url: 'https://santosdlaysa.github.io/website/',
@@ -140,7 +148,7 @@ export const PROJECTS: Project[] = [
     description: 'Plataforma de recrutamento com interface intuitiva e funcionalidades avançadas.'
   },
   {
-    id: '7',
+    id: '8',
     title: 'Site de Estética',
     image: '/Imagem-login.png',
     url: 'https://santosdlaysa.github.io/tela-de-login/',
@@ -148,7 +156,7 @@ export const PROJECTS: Project[] = [
     description: 'Sistema de login para clínica de estética com design moderno e seguro.'
   },
   {
-    id: '8',
+    id: '9',
     title: 'Relógio Digital',
     image: '/relogio.png',
     url: 'https://santosdlaysa.github.io/RelogioDigital/',
@@ -156,7 +164,7 @@ export const PROJECTS: Project[] = [
     description: 'Relógio digital interativo com múltiplos fusos horários e cronômetro.'
   },
   {
-    id: '9',
+    id: '10',
     title: 'Todo List',
     image: '/todolist.png',
     url: 'https://santosdlaysa.github.io/Todo-list/',

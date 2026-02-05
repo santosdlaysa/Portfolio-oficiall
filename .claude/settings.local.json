@@ -4,7 +4,10 @@
       "Bash(npm install)",
       "Bash(npm run type-check:*)",
       "Bash(npm run build:*)",
-      "Bash(mv:*)"
+      "Bash(mv:*)",
+      "Bash(copy \"C:\\\\Users\\\\ldsantos\\\\Documents\\\\Portfolio-oficiall\\\\assets\\\\agronet.png\" \"C:\\\\Users\\\\ldsantos\\\\Documents\\\\Portfolio-oficiall\\\\public\\\\agronet.png\")",
+      "Bash(git add:*)",
+      "Bash(git commit:*)"
     ],
     "deny": [],
     "ask": []
