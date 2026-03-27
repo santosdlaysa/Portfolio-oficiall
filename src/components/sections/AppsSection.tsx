@@ -4,7 +4,7 @@ import { APPS } from '@/utils/constants';
 export function AppsSection() {
   return (
     <section id="aplicativos" className="relative py-20 overflow-hidden">
-      {/* Dark background with gradient */}
+      {/* Dark background */}
       <div className="absolute inset-0 bg-gradient-to-br from-primary-950 via-primary-900 to-purple-950" />
 
       {/* Glow effects */}

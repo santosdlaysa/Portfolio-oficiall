@@ -16,8 +16,8 @@ export default function App() {
       <main className="relative">
         <HeroSection />
         <TechnologiesSection />
-        <ProjectsSection />
         <AppsSection />
+        <ProjectsSection />
         <ContactSection />
       </main>
       <Footer />
