@@ -1,4 +1,4 @@
-import type { PersonalInfo, Project, Technology, NavigationItem } from '@/types';
+import type { PersonalInfo, Project, Technology, NavigationItem, AppItem } from '@/types';
 
 export const PERSONAL_INFO: PersonalInfo = {
   name: 'Laysa Diniz',
@@ -29,7 +29,8 @@ export const NAVIGATION: NavigationItem[] = [
   { label: 'Home', href: '#home' },
   { label: 'Contatos', href: '#contatos' },
   { label: 'Tecnologias', href: '#tecnologias' },
-  { label: 'Projetos', href: '#projetos' }
+  { label: 'Projetos', href: '#projetos' },
+  { label: 'Aplicativos', href: '#aplicativos' }
 ];
 
 export const TECHNOLOGIES: Technology[] = [
@@ -118,7 +119,7 @@ export const PROJECTS: Project[] = [
   {
     id: '4',
     title: 'AgendaMais',
-    image: '/img_1.png',
+    image: '/orgenyxapp.png',
     url: 'https://agendamais-x19j.vercel.app/',
     technologies: ['React', 'TypeScript', 'Tailwind CSS'],
     description: 'Sistema de agendamento online moderno e intuitivo para gerenciar compromissos e horários de forma eficiente.'
@@ -178,5 +179,17 @@ export const PROJECTS: Project[] = [
     url: 'https://santosdlaysa.github.io/Todo-list/',
     technologies: ['HTML', 'CSS', 'JavaScript'],
     description: 'Aplicativo de lista de tarefas com funcionalidades de adicionar, editar e excluir.'
+  }
+];
+
+export const APPS: AppItem[] = [
+  {
+    id: '1',
+    title: 'Orgenyx',
+    image: '/orgenyxapp.png',
+    url: 'https://apps.apple.com/br/app/orgenyx/id6760567600',
+    technologies: ['React Native', 'TypeScript'],
+    platform: 'iOS',
+    description: 'Aplicativo de organização de tarefas e produtividade diária, com categorização de atividades e acompanhamento de progresso.'
   }
 ];

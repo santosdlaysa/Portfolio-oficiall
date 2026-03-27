@@ -3,6 +3,7 @@ import { Footer } from '@/components/layout/Footer';
 import { HeroSection } from '@/components/sections/HeroSection';
 import { TechnologiesSection } from '@/components/sections/TechnologiesSection';
 import { ProjectsSection } from '@/components/sections/ProjectsSection';
+import { AppsSection } from '@/components/sections/AppsSection';
 import { ContactSection } from '@/components/sections/ContactSection';
 import { useScrollToSection } from '@/hooks/useScrollToSection';
 
@@ -16,6 +17,7 @@ export default function App() {
         <HeroSection />
         <TechnologiesSection />
         <ProjectsSection />
+        <AppsSection />
         <ContactSection />
       </main>
       <Footer />

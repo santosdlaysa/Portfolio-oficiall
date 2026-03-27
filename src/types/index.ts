@@ -7,6 +7,16 @@ export interface Project {
   technologies?: string[];
 }
 
+export interface AppItem {
+  id: string;
+  title: string;
+  description?: string;
+  image: string;
+  url: string;
+  technologies?: string[];
+  platform: 'iOS' | 'Android' | 'iOS & Android';
+}
+
 export interface Technology {
   name: string;
   icon: string;
