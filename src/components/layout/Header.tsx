@@ -1,62 +1,56 @@
 import { useState, useEffect } from 'react';
+import { motion, useScroll, useTransform, AnimatePresence } from 'framer-motion';
 import { Menu, X, Code2, ChevronRight } from 'lucide-react';
-import { Button } from '@/components/ui/Button';
+import { MagneticButton } from '@/components/ui/MagneticButton';
 import { NAVIGATION, PERSONAL_INFO } from '@/utils/constants';
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const { scrollY } = useScroll();
+  const headerBg = useTransform(scrollY, [0, 100], ['rgba(10, 10, 20, 0)', 'rgba(10, 10, 20, 0.8)']);
+  const headerBlur = useTransform(scrollY, [0, 100], ['blur(0px)', 'blur(24px)']);
+  const borderOpacity = useTransform(scrollY, [0, 100], [0, 0.15]);
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
-    };
+    const unsubscribe = scrollY.on('change', (v) => setIsScrolled(v > 50));
+    return unsubscribe;
+  }, [scrollY]);
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
-  };
-
-  const closeMenu = () => {
-    setIsMenuOpen(false);
-  };
+  const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
+  const closeMenu = () => setIsMenuOpen(false);
 
   return (
-    <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-        isScrolled
-          ? 'bg-white/70 backdrop-blur-2xl border-b border-purple-100/50 shadow-[0_8px_32px_rgba(124,58,237,0.1)]'
-          : 'bg-transparent'
-      }`}
+    <motion.header
+      className="fixed top-0 left-0 right-0 z-50 transition-all duration-300"
+      style={{
+        backgroundColor: headerBg,
+        backdropFilter: headerBlur,
+        borderBottom: borderOpacity.get() > 0 ? `1px solid rgba(255, 255, 255, ${borderOpacity.get()})` : 'none',
+      }}
     >
       <nav className="flex items-center justify-between px-6 py-3 max-w-7xl mx-auto">
-        {/* Logo com foto */}
-        <a
-          href="#home"
-          className="flex items-center gap-3 group"
-        >
+        {/* Logo */}
+        <a href="#home" className="flex items-center gap-3 group">
           <div className="relative">
-            <div className={`absolute inset-0 rounded-full bg-gradient-to-r from-purple-600 via-pink-500 to-purple-600 blur-md opacity-75 group-hover:opacity-100 transition-opacity duration-300 ${isScrolled ? 'opacity-60' : 'opacity-75'}`} />
-            <div className="relative w-10 h-10 rounded-full p-[2px] bg-gradient-to-r from-purple-600 via-pink-500 to-purple-600">
+            <div className={`absolute inset-0 rounded-full blur-md transition-opacity duration-300 ${isScrolled ? 'opacity-40' : 'opacity-60'}`}
+              style={{ background: 'linear-gradient(135deg, #a855f7, #b44aff)' }}
+            />
+            <div className="relative w-10 h-10 rounded-full p-[2px]"
+              style={{ background: 'linear-gradient(135deg, #a855f7, #b44aff, #ff00e5)' }}
+            >
               <img
                 src={PERSONAL_INFO.profileImage}
                 alt={PERSONAL_INFO.name}
-                className="w-full h-full rounded-full object-cover border-2 border-white"
+                className="w-full h-full rounded-full object-cover border-2 border-surface-900"
               />
             </div>
           </div>
           <div className="flex flex-col">
-            <span className={`text-sm font-bold transition-colors duration-300 ${
-              isScrolled ? 'text-primary-900' : 'text-white'
-            }`}>
+            <span className="text-sm font-bold text-white transition-colors duration-300">
               {PERSONAL_INFO.name.split(' ')[0]}
             </span>
-            <span className={`text-xs transition-colors duration-300 flex items-center gap-1 ${
-              isScrolled ? 'text-purple-600' : 'text-purple-200'
-            }`}>
+            <span className="text-xs text-neon-cyan/70 transition-colors duration-300 flex items-center gap-1">
               <Code2 size={10} />
               Developer
             </span>
@@ -65,51 +59,38 @@ export function Header() {
 
         {/* Desktop Menu */}
         <div className={`hidden md:flex items-center gap-1 px-2 py-1.5 rounded-full transition-all duration-300 ${
-          isScrolled
-            ? 'bg-gray-100/80'
-            : 'bg-white/10 backdrop-blur-sm'
+          isScrolled ? 'bg-white/5' : 'bg-white/5 backdrop-blur-sm'
         }`}>
           {NAVIGATION.map((item) => (
             <a
               key={item.href}
               href={item.href}
-              className={`relative px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 hover:scale-105 ${
-                isScrolled
-                  ? 'text-primary-700 hover:text-white hover:bg-gradient-to-r hover:from-purple-600 hover:to-pink-500'
-                  : 'text-white/90 hover:text-white hover:bg-white/20'
-              }`}
+              className="relative px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 text-white/70 hover:text-neon-cyan group"
             >
               {item.label}
+              {/* Neon underline on hover */}
+              <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-[2px] bg-neon-cyan group-hover:w-3/4 transition-all duration-300 shadow-[0_0_8px_rgba(0,240,255,0.5)]" />
             </a>
           ))}
         </div>
 
         {/* CTA Button */}
         <div className="hidden md:block">
-          <Button
+          <MagneticButton
             as="a"
             href="#contatos"
-            size="sm"
-            className={`group relative overflow-hidden transition-all duration-300 ${
-              isScrolled
-                ? 'bg-gradient-to-r from-purple-600 to-pink-500 text-white shadow-lg shadow-purple-500/25 hover:shadow-purple-500/40 hover:scale-105'
-                : 'bg-white/10 backdrop-blur-sm border border-white/30 text-white hover:bg-white hover:text-primary-900'
-            }`}
+            className="inline-flex items-center gap-1 px-5 py-2 text-sm font-semibold rounded-full transition-all duration-300 bg-neon-cyan/10 border border-neon-cyan/30 text-neon-cyan hover:bg-neon-cyan/20 hover:shadow-neon-cyan"
           >
-            <span className="relative z-10 flex items-center gap-1">
+            <span className="flex items-center gap-1">
               Contato
-              <ChevronRight size={14} className="group-hover:translate-x-1 transition-transform" />
+              <ChevronRight size={14} />
             </span>
-          </Button>
+          </MagneticButton>
         </div>
 
         {/* Mobile Menu Button */}
         <button
-          className={`md:hidden p-2.5 rounded-xl transition-all duration-300 ${
-            isScrolled
-              ? 'text-primary-900 bg-gray-100 hover:bg-purple-100'
-              : 'text-white bg-white/10 hover:bg-white/20'
-          }`}
+          className="md:hidden p-2.5 rounded-xl transition-all duration-300 text-white bg-white/10 hover:bg-white/20"
           onClick={toggleMenu}
           aria-label="Toggle menu"
         >
@@ -117,85 +98,105 @@ export function Header() {
         </button>
 
         {/* Mobile Menu Overlay */}
-        {isMenuOpen && (
-          <div
-            className="fixed inset-0 bg-black/60 backdrop-blur-md md:hidden z-40"
-            onClick={closeMenu}
-          />
-        )}
+        <AnimatePresence>
+          {isMenuOpen && (
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              className="fixed inset-0 bg-black/60 backdrop-blur-md md:hidden z-40"
+              onClick={closeMenu}
+            />
+          )}
+        </AnimatePresence>
 
         {/* Mobile Menu */}
-        <div className={`fixed top-0 right-0 h-full w-80 bg-gradient-to-b from-white to-purple-50 shadow-2xl transform transition-transform duration-500 ease-out md:hidden z-50 ${
-          isMenuOpen ? 'translate-x-0' : 'translate-x-full'
-        }`}>
-          <div className="p-6">
-            {/* Mobile header */}
-            <div className="flex items-center justify-between mb-8 pb-6 border-b border-purple-100">
-              <div className="flex items-center gap-3">
-                <div className="relative">
-                  <div className="absolute inset-0 rounded-full bg-gradient-to-r from-purple-600 to-pink-500 blur-md opacity-60" />
-                  <div className="relative w-12 h-12 rounded-full p-[2px] bg-gradient-to-r from-purple-600 to-pink-500">
-                    <img
-                      src={PERSONAL_INFO.profileImage}
-                      alt={PERSONAL_INFO.name}
-                      className="w-full h-full rounded-full object-cover border-2 border-white"
-                    />
+        <AnimatePresence>
+          {isMenuOpen && (
+            <motion.div
+              initial={{ x: '100%' }}
+              animate={{ x: 0 }}
+              exit={{ x: '100%' }}
+              transition={{ type: 'spring', damping: 25, stiffness: 200 }}
+              className="fixed top-0 right-0 h-full w-80 bg-gradient-to-b from-surface-900 to-surface-800 shadow-2xl md:hidden z-50 border-l border-white/10"
+            >
+              <div className="p-6">
+                {/* Mobile header */}
+                <div className="flex items-center justify-between mb-8 pb-6 border-b border-white/10">
+                  <div className="flex items-center gap-3">
+                    <div className="relative">
+                      <div className="absolute inset-0 rounded-full blur-md opacity-60"
+                        style={{ background: 'linear-gradient(135deg, #a855f7, #b44aff)' }}
+                      />
+                      <div className="relative w-12 h-12 rounded-full p-[2px]"
+                        style={{ background: 'linear-gradient(135deg, #a855f7, #b44aff, #ff00e5)' }}
+                      >
+                        <img
+                          src={PERSONAL_INFO.profileImage}
+                          alt={PERSONAL_INFO.name}
+                          className="w-full h-full rounded-full object-cover border-2 border-surface-900"
+                        />
+                      </div>
+                    </div>
+                    <div>
+                      <span className="block text-base font-bold text-white">
+                        {PERSONAL_INFO.name.split(' ')[0]}
+                      </span>
+                      <span className="text-xs text-neon-cyan/70 flex items-center gap-1">
+                        <Code2 size={10} />
+                        {PERSONAL_INFO.role}
+                      </span>
+                    </div>
                   </div>
+                  <button
+                    onClick={closeMenu}
+                    className="p-2 rounded-xl bg-white/10 hover:bg-white/20 text-white transition-colors"
+                  >
+                    <X size={18} />
+                  </button>
                 </div>
-                <div>
-                  <span className="block text-base font-bold text-primary-900">
-                    {PERSONAL_INFO.name.split(' ')[0]}
-                  </span>
-                  <span className="text-xs text-purple-600 flex items-center gap-1">
-                    <Code2 size={10} />
-                    {PERSONAL_INFO.role}
-                  </span>
-                </div>
-              </div>
-              <button
-                onClick={closeMenu}
-                className="p-2 rounded-xl bg-purple-100 hover:bg-purple-200 text-purple-700 transition-colors"
-              >
-                <X size={18} />
-              </button>
-            </div>
 
-            {/* Mobile navigation */}
-            <ul className="space-y-2">
-              {NAVIGATION.map((item, index) => (
-                <li key={item.href} style={{ animationDelay: `${index * 50}ms` }}>
+                {/* Mobile navigation */}
+                <ul className="space-y-2">
+                  {NAVIGATION.map((item, index) => (
+                    <motion.li
+                      key={item.href}
+                      initial={{ opacity: 0, x: 20 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      transition={{ delay: index * 0.05 }}
+                    >
+                      <a
+                        href={item.href}
+                        className="flex items-center justify-between w-full px-4 py-3.5 text-white/70 hover:text-neon-cyan hover:bg-white/5 rounded-xl transition-all duration-300 font-medium group"
+                        onClick={closeMenu}
+                      >
+                        {item.label}
+                        <ChevronRight size={16} className="opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all text-neon-cyan" />
+                      </a>
+                    </motion.li>
+                  ))}
+                </ul>
+
+                {/* Mobile CTA */}
+                <div className="mt-8 pt-6 border-t border-white/10">
                   <a
-                    href={item.href}
-                    className="flex items-center justify-between w-full px-4 py-3.5 text-primary-700 hover:text-white hover:bg-gradient-to-r hover:from-purple-600 hover:to-pink-500 rounded-xl transition-all duration-300 font-medium group"
+                    href="#contatos"
+                    className="flex items-center justify-center gap-2 w-full py-3.5 rounded-xl font-semibold text-surface-900 transition-all duration-300"
+                    style={{ background: 'linear-gradient(135deg, #a855f7, #b44aff)' }}
                     onClick={closeMenu}
                   >
-                    {item.label}
-                    <ChevronRight size={16} className="opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all" />
+                    Entre em Contato
                   </a>
-                </li>
-              ))}
-            </ul>
 
-            {/* Mobile CTA */}
-            <div className="mt-8 pt-6 border-t border-purple-100">
-              <Button
-                as="a"
-                href="#contatos"
-                size="lg"
-                className="w-full bg-gradient-to-r from-purple-600 to-pink-500 text-white shadow-lg shadow-purple-500/25 hover:shadow-purple-500/40 hover:scale-[1.02] transition-all duration-300"
-                onClick={closeMenu}
-              >
-                Entre em Contato
-              </Button>
-
-              {/* Social links hint */}
-              <p className="text-center text-xs text-primary-400 mt-4">
-                Veja meus projetos e redes sociais
-              </p>
-            </div>
-          </div>
-        </div>
+                  <p className="text-center text-xs text-white/30 mt-4">
+                    Veja meus projetos e redes sociais
+                  </p>
+                </div>
+              </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
       </nav>
-    </header>
+    </motion.header>
   );
 }
