@@ -12,6 +12,7 @@ export interface AppItem {
   title: string;
   description?: string;
   image: string;
+  icon?: string;
   url: string;
   technologies?: string[];
   platform: 'iOS' | 'Android' | 'iOS & Android';

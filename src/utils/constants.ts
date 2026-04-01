@@ -191,5 +191,15 @@ export const APPS: AppItem[] = [
     technologies: ['React Native', 'TypeScript'],
     platform: 'iOS',
     description: 'Aplicativo de organização de tarefas e produtividade diária, com categorização de atividades e acompanhamento de progresso.'
+  },
+  {
+    id: '2',
+    title: 'Doce Preço',
+    image: '/screendocepreco.png',
+    icon: '/icondocepreco.png',
+    url: 'https://apps.apple.com/us/app/docepre%C3%A7o/id6761034172',
+    technologies: ['React Native', 'TypeScript'],
+    platform: 'iOS',
+    description: 'Aplicativo para comparação e acompanhamento de preços de produtos, ajudando o consumidor a encontrar as melhores ofertas.'
   }
 ];
