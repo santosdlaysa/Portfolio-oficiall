@@ -12,7 +12,9 @@
       "Bash(npx vite build)",
       "Bash(git checkout:*)",
       "Bash(npm install:*)",
-      "Bash(find:*)"
+      "Bash(find:*)",
+      "Bash(ls -la /c/Users/ldsantos/Documents/Portfolio-oficial*)",
+      "Bash(ls -1d Portfolio*)"
     ],
     "deny": [],
     "ask": []

@@ -188,8 +188,9 @@ export const APPS: AppItem[] = [
     title: 'Orgenyx',
     image: '/orgenyxapp.png',
     url: 'https://apps.apple.com/br/app/orgenyx/id6760567600',
+    playStoreUrl: 'https://play.google.com/store/apps/details?id=com.orgenyx',
     technologies: ['React Native', 'TypeScript'],
-    platform: 'iOS',
+    platform: 'iOS & Android',
     description: 'Aplicativo de organização de tarefas e produtividade diária, com categorização de atividades e acompanhamento de progresso.'
   },
   {

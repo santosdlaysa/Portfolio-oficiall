@@ -14,6 +14,7 @@ export interface AppItem {
   image: string;
   icon?: string;
   url: string;
+  playStoreUrl?: string;
   technologies?: string[];
   platform: 'iOS' | 'Android' | 'iOS & Android';
 }
