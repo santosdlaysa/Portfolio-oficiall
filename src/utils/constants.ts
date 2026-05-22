@@ -202,5 +202,14 @@ export const APPS: AppItem[] = [
     technologies: ['React Native', 'TypeScript'],
     platform: 'iOS',
     description: 'Aplicativo para comparação e acompanhamento de preços de produtos, ajudando o consumidor a encontrar as melhores ofertas.'
+  },
+  {
+    id: '3',
+    title: 'Organiza Ela',
+    image: '/3.jpeg',
+    url: 'https://apps.apple.com/us/app/organiza-ela/id6772197107',
+    technologies: ['React Native', 'TypeScript'],
+    platform: 'iOS',
+    description: 'Aplicativo de organização pessoal voltado para o público feminino, com funcionalidades para gerenciar tarefas e rotinas do dia a dia.'
   }
 ];
