@@ -210,6 +210,6 @@ export const APPS: AppItem[] = [
     url: 'https://apps.apple.com/us/app/organiza-ela/id6772197107',
     technologies: ['React Native', 'TypeScript'],
     platform: 'iOS',
-    description: 'Aplicativo de organização pessoal voltado para o público feminino, com funcionalidades para gerenciar tarefas e rotinas do dia a dia.'
+    description: 'Aplicativo de organização pessoal voltado para todos os públicos, com funcionalidades para gerenciar tarefas e rotinas do dia a dia.'
   }
 ];
