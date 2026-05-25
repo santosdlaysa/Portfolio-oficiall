@@ -208,7 +208,7 @@ export const APPS: AppItem[] = [
     title: 'Organiza Ela',
     image: '/3.jpeg',
     url: 'https://apps.apple.com/us/app/organiza-ela/id6772197107',
-    technologies: ['React Native', 'TypeScript'],
+    technologies: ['Flutter'],
     platform: 'iOS',
     description: 'Aplicativo de organização pessoal voltado para todos os públicos, com funcionalidades para gerenciar tarefas e rotinas do dia a dia.'
   }
